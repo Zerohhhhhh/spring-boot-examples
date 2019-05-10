@@ -8,6 +8,23 @@
       <div class="starter-template">
         <h1>Spring MVC / Thymeleaf / Bootstrap</h1>
         <p class="lead" th:text="${greeting}">(greeting)</p>
+        <table align="center" border="1">
+          <thead>
+          <td>ID</td>
+          <td>用户名</td>
+          <td>邮箱</td>
+          <td>nickName</td>
+          <td>regTime</td>
+          </thead>
+          <tr th:each="user : ${users}">
+            <td th:text="${user.id}">Onions</td>
+            <td th:text="${user.userName}">2.41</td>
+            <td th:text="${user.email}">yes</td>
+            <td th:text="${user.nickName}">2.41</td>
+            <td th:text="${user.regTime}">yes</td>
+          </tr>
+
+        </table>
         <p>The current time is <span th:text="${currentTime}">(time)</span></p>
       </div>
     </div>
